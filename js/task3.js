@@ -1,8 +1,18 @@
 function checkForSpam(message){
     const blackListedWord1 = "sale";
     const blackListedWord2 = "spam";
-    console.log(message.toLowerCase().includes(blackListedWord1), message.toLowerCase().includes(blackListedWord2) )
+    return (message.toLowerCase().includes(blackListedWord1) || message.toLowerCase().includes(blackListedWord2));
     }
+
+
+// function checkForSpam(message){
+//     const blackLictedWord1 = "sale";
+//     const blackListedWord2 = "spam";
+//     const lowercaseInput = message.toLowerCase();
+
+//     return(lowercaseInput.includes(blackLictedWord1) || lowercaseInput.includes(blackListedWord2));
+// }
+
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
